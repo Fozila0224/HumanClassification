@@ -2,8 +2,10 @@ import streamlit as st
 from fastai.vision.all import *
 import plotly.express as px
 import pathlib
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+import platform
+plt = platform.system()
+if plt=='Linux': pathlib.WindowsPath = pathlib.PosixPath
+
 st.title("Rasmdagi insonni aniqlovchi model")
 
 file = st.file_uploader('Rasm yuklash', type= ['jpeg', 'png', 'gif', 'svg'])
