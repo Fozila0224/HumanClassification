@@ -3,8 +3,12 @@ from fastai.vision.all import *
 import plotly.express as px
 import pathlib
 import platform
+
 plt = platform.system()
-if plt=='Linux': pathlib.WindowsPath = pathlib.PosixPath
+if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
+    
+# plt = platform.system()
+# if plt=='Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 st.title("Rasmdagi insonni aniqlovchi model")
 
