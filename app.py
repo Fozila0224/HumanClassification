@@ -6,7 +6,7 @@ import platform
 
 #plt = platform.system()
 #if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
-    
+torch.classes.__path__ = []    
 plt = platform.system()
 if plt=='Linux': pathlib.WindowsPath = pathlib.PosixPath
 
